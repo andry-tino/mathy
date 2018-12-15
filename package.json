@@ -1,0 +1,41 @@
+{
+    "name": "mathy",
+    "version": "1.0.0",
+    "description": "An autoring environment to create single page Mathematical flows for the web",
+    "main": "index.js",
+    "scripts": {
+        "build": "./node_modules/.bin/tsc --project .",
+        "clean": "rm -R .\\out",
+        "start": "electron .\\out\\",
+        "tslint": "./node_modules/.bin/tslint --project ./tsconfig.json",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/andry-tino/mathy.git"
+    },
+    "keywords": [
+        "autoring",
+        "math",
+        "typesetting-system"
+    ],
+    "author": "Andrea Tino",
+    "license": "AGPL-3.0",
+    "bugs": {
+        "url": "https://github.com/andry-tino/mathy/issues"
+    },
+    "homepage": "https://github.com/andry-tino/mathy#readme",
+    "dependencies": {
+        "mathjax": "2.7.5"
+    },
+    "devDependencies": {
+        "@types/jest": "23.3.10",
+        "typescript": "3.2.2",
+        "electron": "3.0.11",
+        "webpack": "4.27.1",
+        "tslint": "5.11.0",
+        "tslint-config-prettier": "1.17.0",
+        "jest": "23.6.0",
+        "ts-jest": "23.10.5"
+    }
+}
