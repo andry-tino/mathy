@@ -4,10 +4,12 @@
     "description": "An autoring environment to create single page Mathematical flows for the web",
     "main": "index.js",
     "scripts": {
-        "build": "./node_modules/.bin/tsc --project .",
+        "compile-ts": ".\\node_modules\\.bin\\tsc --project .",
+        "check-tslint": ".\\node_modules\\.bin\\tslint --project .\\tsconfig.json",
+        "assets-copy": ".\\node_modules\\.bin\\copy .\\src\\index.html .\\out",
+        "build": ".\\node_modules\\.bin\\npm-run-all check-tslint compile-ts assets-copy",
         "clean": "rm -R .\\out",
         "start": "electron .\\out\\",
-        "tslint": "./node_modules/.bin/tslint --project ./tsconfig.json",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -36,6 +38,8 @@
         "tslint": "5.11.0",
         "tslint-config-prettier": "1.17.0",
         "jest": "23.6.0",
-        "ts-jest": "23.10.5"
+        "ts-jest": "23.10.5",
+        "copy": "0.3.2",
+        "npm-run-all": "4.1.5"
     }
 }
