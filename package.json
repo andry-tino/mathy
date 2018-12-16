@@ -2,14 +2,14 @@
     "name": "mathy",
     "version": "1.0.0",
     "description": "An autoring environment to create single page Mathematical flows for the web",
-    "main": "index.js",
+    "main": "main.js",
     "scripts": {
         "compile-ts": ".\\node_modules\\.bin\\tsc --project .",
         "check-tslint": ".\\node_modules\\.bin\\tslint --project .\\tsconfig.json",
-        "assets-copy": ".\\node_modules\\.bin\\copy .\\src\\index.html .\\out",
+        "assets-copy": ".\\node_modules\\.bin\\copy .\\src\\index.html .\\out\\",
         "build": ".\\node_modules\\.bin\\npm-run-all check-tslint compile-ts assets-copy",
-        "clean": "rm -R .\\out",
-        "start": "electron .\\out\\",
+        "clean": ".\\node_modules\\.bin\\rimraf .\\out",
+        "start": ".\\node_modules\\.bin\\electron .\\out\\main.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -40,6 +40,7 @@
         "jest": "23.6.0",
         "ts-jest": "23.10.5",
         "copy": "0.3.2",
-        "npm-run-all": "4.1.5"
+        "npm-run-all": "4.1.5",
+        "rimraf": "2.6.2"
     }
 }
