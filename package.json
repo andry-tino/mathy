@@ -4,10 +4,12 @@
     "description": "An autoring environment to create single page Mathematical flows for the web",
     "main": "main.js",
     "scripts": {
-        "compile-ts": ".\\node_modules\\.bin\\tsc --project .",
-        "check-tslint": ".\\node_modules\\.bin\\tslint --project .\\tsconfig.json",
+        "compile-ts-brws": ".\\node_modules\\.bin\\tsc --project .\\src\\browser",
+        "compile-ts": ".\\node_modules\\.bin\\tsc --project .\\src",
+        "check-tslint": ".\\node_modules\\.bin\\tslint --project .\\src\\tsconfig.json",
+        "check-tslint-brws": ".\\node_modules\\.bin\\tslint --project .\\src\\browser\\tsconfig.json",
         "assets-copy": ".\\node_modules\\.bin\\copy .\\src\\index.html .\\out\\",
-        "build": ".\\node_modules\\.bin\\npm-run-all check-tslint compile-ts assets-copy",
+        "build": ".\\node_modules\\.bin\\npm-run-all check-tslint compile-ts check-tslint-brws compile-ts-brws assets-copy",
         "clean": ".\\node_modules\\.bin\\rimraf .\\out",
         "start": ".\\node_modules\\.bin\\electron .\\out\\main.js",
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,7 +30,9 @@
     },
     "homepage": "https://github.com/andry-tino/mathy#readme",
     "dependencies": {
-        "mathjax": "2.7.5"
+        "mathjax": "2.7.5",
+        "mathjax-node": "2.1.1",
+        "panzoom": "7.1.1"
     },
     "devDependencies": {
         "@types/jest": "23.3.10",
