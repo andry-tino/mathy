@@ -1,14 +1,14 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "module": "system",
+        "module": "none",
         "declaration": true,
         "strict": true,
         "strictNullChecks": false,
-        "outFile": "../../out/brws-mathy.js"
+        "outDir": "../../out/browser"
     },
     "typeRoots": [
-        "./node_modules/@types"
+        "../../node_modules/@types"
     ],
     "include": [
         "./**/*"
