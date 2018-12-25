@@ -8,8 +8,9 @@
         "compile-ts": ".\\node_modules\\.bin\\tsc --project .\\src",
         "check-tslint": ".\\node_modules\\.bin\\tslint --project .\\src\\tsconfig.json",
         "check-tslint-brws": ".\\node_modules\\.bin\\tslint --project .\\src\\browser\\tsconfig.json",
+        "compile-sass": ".\\node_modules\\.bin\\sass .\\src\\browser\\style\\style.scss .\\out\\style.css",
         "assets-copy": ".\\node_modules\\.bin\\copy .\\src\\index.html .\\out\\",
-        "build": ".\\node_modules\\.bin\\npm-run-all check-tslint compile-ts check-tslint-brws compile-ts-brws assets-copy",
+        "build": ".\\node_modules\\.bin\\npm-run-all check-tslint compile-ts check-tslint-brws compile-ts-brws compile-sass assets-copy",
         "clean": ".\\node_modules\\.bin\\rimraf .\\out",
         "start": ".\\node_modules\\.bin\\electron .\\out\\main.js",
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -46,6 +47,7 @@
         "ts-jest": "23.10.5",
         "copy": "0.3.2",
         "npm-run-all": "4.1.5",
-        "rimraf": "2.6.2"
+        "rimraf": "2.6.2",
+        "sass": "1.15.2"
     }
 }
