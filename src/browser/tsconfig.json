@@ -5,13 +5,17 @@
         "declaration": true,
         "strict": true,
         "strictNullChecks": false,
-        "outDir": "../../out/browser"
+        "outDir": "../../out/browser",
+        "moduleResolution": "node"
     },
     "typeRoots": [
+        "../../node_modules",
         "../../node_modules/@types",
         "../definitions"
     ],
     "include": [
+        "../../node_modules/interactjs/index.d.ts",
+        "../definitions/*.d.ts",
         "./**/*"
     ]
 }

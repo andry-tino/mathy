@@ -3,4 +3,4 @@
  * Declaration file for 'interactjs'.
  */
 
-declare type interact = string;
+declare type sometyp = string;
