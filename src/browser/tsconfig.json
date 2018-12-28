@@ -1,12 +1,15 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "module": "none",
+        "module": "es6",
         "declaration": true,
         "strict": true,
         "strictNullChecks": false,
         "outDir": "../../out/browser",
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+        "jsx": "react",
+        "sourceMap": true
     },
     "typeRoots": [
         "../../node_modules",

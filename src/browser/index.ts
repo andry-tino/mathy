@@ -1,8 +1,26 @@
-const os = require("os");
+/**
+ * Andrea Tino - 2018
+ */
 
+import { InputStub } from "./inputStub";
+
+// Start
 window.addEventListener("load", (e) => {
-    document.body.textContent = "Hi " + os.constants.UV_UDP_REUSEADDR;
+    initialize();
 });
 
-const s : interact.Position = { x: 1, y: 2 };
-const a: sometyp = "";
+function initialize() {
+    attachBrowserEvents();
+}
+
+function attachBrowserEvents() {
+    window.addEventListener("click", () => {
+        onBodyClicked();
+    });
+}
+
+function onBodyClicked() {
+    document.body.textContent += "A";
+    const a: interact.Position = null;
+    const b: InputStub = new InputStub();
+}
