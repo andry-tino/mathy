@@ -4,6 +4,7 @@
 
 import { BrowserControl } from "./browserControl";
 import { isElementInDom } from "./renderingUtils";
+import { INPUT_STUB_CLASSNAME } from "./styleClasses";
 
 /**
  * Represents the UI artifact for inserting content.
@@ -22,7 +23,10 @@ export class InputStub implements BrowserControl {
             return;
         }
 
-        const parent = this.parentElement || document.body;
+        this._element = document.createElement("div");
+        this._element.classList.add(INPUT_STUB_CLASSNAME);
+
+        (this.parentElement || document.body).append(this._element);
     }
 
     public detach() {
@@ -30,7 +34,7 @@ export class InputStub implements BrowserControl {
             return;
         }
 
-        // TODO
+        this._element.parentElement.removeChild(this._element);
     }
 
     public get element(): HTMLElement {

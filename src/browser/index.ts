@@ -20,7 +20,6 @@ function attachBrowserEvents() {
 }
 
 function onBodyClicked() {
-    document.body.textContent += "A";
-    const a: interact.Position = null;
-    const b: InputStub = new InputStub();
+    const stub = new InputStub();
+    stub.render();
 }
