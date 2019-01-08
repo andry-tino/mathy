@@ -4,3 +4,9 @@
  */
 
 declare type sometyp = string;
+
+declare namespace interact {
+    interface InteractEvent {
+        smn: number;
+    }
+}

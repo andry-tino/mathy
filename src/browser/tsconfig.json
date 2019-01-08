@@ -17,8 +17,6 @@
         "../definitions"
     ],
     "include": [
-        "../../node_modules/interactjs/index.d.ts",
-        "../definitions/*.d.ts",
         "./**/*"
     ]
 }
